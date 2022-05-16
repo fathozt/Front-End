@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        display: grid;
+        height: 4764px;
+        grid-template-rows: minmax(0, 0.28fr) 0.2fr 0.3fr 1fr;
+        grid-template-columns: 1fr 3fr 10fr 3fr 1fr; 
+      }
+      .image {
+        overflow: hidden;
+        display: grid;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        z-index: -2;
+        margin: 0;
+      }
+      .ingradient {
+        grid-column-end: 6;
+        display: grid;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        grid-column-start: 1;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+      .backgroundImg {
+        width: 100%;
+        display: grid;
+        display: block;
+        grid-row-start: 1;
+        grid-column-end: 2;
+        object-fit: cover;
+        height: 100%;
+      }
+      .netLogo {
+        display: grid;
+        grid-row-start: 2;
+        max-width: 165px;
+      }
+      .navbar {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 8fr 1fr 1fr;
+        grid-template-rows: 0.3fr 1fr 10fr;
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        justify-items: center;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+      }
+      .btnSignIn {
+        height: 36px;
+        width: 100px;
+        border: none;
+        border-radius: 3px;
+        color: white;
+        background-color: red;
+        font-family: Netflix Sans ", " Helvetica Neue
+          ", Helvetica, Arial, sans-serif";
+        font-weight: 400;
+        font-size: 16px;
+        display: grid;
+        grid-column-start: 4;
+        display: grid;
+        grid-row-start: 2;
+      }
+      .slctLang {
+        height: 36px;
+        width: 100px;
+        display: grid;
+        grid-column-start: 3;
+        grid-row-start: 2;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+      }
+      .main-content {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr 1fr 0.2fr 2fr;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        position: relative;
+        z-index: 2;
+      }
+      .emailDiv {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-template-rows: 0.2fr 0.5fr 0.5fr;
+        grid-template-rows: 1fr 1fr;
+      }
+      #email-h3 {
+        color: white;
+        font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial,
+          sans-serif;
+        position: relative;
+        font-size: 1.2rem;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 2rem;
+        display: block;
+      }
+
+      #main-content-h1 {
+        display: grid;
+        grid-row-start: 2;
+        display: block;
+        position: absolute;
+        color: white;
+        font-size: 4em;
+        text-align: center;
+        font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial,
+          sans-serif;
+        position: relative;
+        margin: auto;
+        width: 650px;
+      }
+      h2 {
+        display: grid;
+        grid-row-start: 3;
+        display: block;
+        position: absolute;
+        color: white;
+        position: relative;
+        margin: auto;
+        text-align: center;
+        font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial,
+          sans-serif;
+      }
+      .story-card {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        background-color: black;
+      }
+      .story-card-text {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr;
+        grid-template-rows: 0.4fr 0.1fr 0.2fr 0.4fr;
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
+
+      .story-card-visuals {
+        display: grid;
+        grid-column-start: 2;
+      }
+      #story-card-h1 {
+        display: grid;
+        grid-column-start: 2;
+        grid-row-start: 2;
+        color: white;
+        font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial,
+          sans-serif;
+        font-size: 3em;
+        font-weight: 700;
+        text-align: center;
+        justify-content: center;
+        margin-top: 5em;
+        padding: 0;
+        display: inline;
+        margin: 0;
+        text-align: left;
+      }
+      #story-card-h2 {
+        display: grid;
+        grid-column-start: 2;
+        grid-row-start: 3;
+        text-align: left;
+        width: 550px;
+        padding: 0;
+        margin: 0;
+        padding-top: 10px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <img class="netLogo" src="Images/NetflixLogo.png" alt="" />
+        <input class="btnSignIn" type="button" value="Sing In" />
+        <select class="slctLang" name="Languages">
+          <option value="Englis">English</option>
+          <option value="German">German</option>
+          <option value="Turkish">Turkish</option>
+        </select>
+      </div>
+
+      <div class="main-content">
+        <h1 id="main-content-h1">Unlimited movies, TV shows, and more.</h1>
+        <h2>Watch anywhere. Cancel anytime.</h2>
+        <div class="emailDiv">
+          <h3 id="email-h3">Ready to watch? Enter your email to create or restart your membership.</h3>
+        </div>
+      </div>
+
+      <div class="ingradient">
+        <div class="image">
+          <img class="backgroundImg" src="Images/BackgroundImage.jpg" alt="" />
+        </div>
+      </div>
+      <div class="story-card">
+        <div class="story-card-text">
+          <h1 id="story-card-h1">Enjoy on your TV.</h1>
+          <h2 id="story-card-h2">
+            Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray
+            players, and more.
+          </h2>
+        </div>
+        <div class="story-card-visuals"></div>
+      </div>
+    </div>
+  </body>
+</html>

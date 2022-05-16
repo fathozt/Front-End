@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        height: 3000px;
+        background-image: url(Images/BackgroundImage.jpg);
+        background-repeat: no-repeat;
+        
+      }
+      .gradientDiv {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr 10fr 4fr 1fr;
+        grid-template-rows: 1fr 6fr;
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+      .netflixLogoDiv {
+        place-items: center;
+        display: grid;
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-column-end: 2;
+      }
+      .buttonsDiv {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-column-start: 4;
+        grid-column-end: 4;
+      }
+      .imgNetflixLogo {
+        margin: 0 auto;
+        display: block;
+        padding: 0;
+        position: absolute;
+        max-width: 100%;
+        height: auto;
+      }
+      #btnSingIn {
+        grid-row-start: 2;
+        grid-column-start: 4;
+        width: 90px;
+        height: 36px;
+        text-align: center;
+        border: none;
+        border-radius: 3px;
+        background-color: red;
+        color: white;
+        font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial,
+          sans-serif;
+        font-size: 16px;
+        font-weight: 400px;
+      }
+      #slcLan {
+        grid-row-start: 2;
+        grid-column-start: 2;
+        border-radius: 3px;
+        width: 90px;
+        height: 36px;
+        background-color: rgba(0, 0, 0, 0.1);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="gradientDiv">
+        <div class="netflixLogoDiv">
+          <img
+            class="netflixLogo"
+            src="Images/B8CwJ5jTrHvMv0LT-croppedPdoNK.png"
+            alt=""
+          />
+        </div>
+        <div class="buttonsDiv">
+          <input id="btnSingIn" type="button" value="Sign In" />
+
+          <select name="Languages" id="slcLan">
+            <option value="English">English</option>
+            <option value="German">German</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

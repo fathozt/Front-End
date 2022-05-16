@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="Images/Netflix Icon.png" />
+    <title>Netflix</title>
+    <style>
+      * {
+        border: 1px solid purple;
+      }
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+      .container {
+        width: 100%;
+        height: 100%;
+      }
+      .navbar {
+        width: 100%;
+        height: 10vh;
+        background-color: aquamarine;
+      }
+      .section {
+        width: 100%;
+        height: 30vh;
+        background-color: blueviolet;
+      }
+      #imgBack {
+        object-fit: cover;
+        width: 100%;
+        height: 66vh;
+        position: relative;
+        z-index: -1;
+      }
+      #netLogo {
+        top: 0;
+        left: 0;
+        width: 230px;
+        position: absolute;
+        margin-left: 6%;
+        margin-top: -18px;
+      }
+      #btnSingIn {
+        top: 0;
+        float: right;
+        margin-top: 20px;
+        margin-left: 90%;
+        margin-right: 20px;
+        position: absolute;
+        width: 90px;
+        height: 36px;
+        text-align: center;
+        border: none;
+        border-radius: 3px;
+        background-color: red;
+        color: white;
+        font-family:'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+        font-size: 16px;
+        font-weight: 400px;
+      }
+
+      #slcLan {
+        top: 0;
+        float: right;
+        margin-top: 20px;
+        margin-left: 83%;
+        position: absolute;
+        border-radius: 3px;
+        width: 90px;
+        height: 36px;
+        background-color: rgba(0, 0, 0, 0.1);
+        color: white;
+      }
+      .gradient {
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+      .main {
+        width: 950px;
+        height: 508px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        
+      }
+      h1 {
+        font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+        position: relative;
+        color: white;
+        font-size: 50px;
+        width: 600px;
+        margin: auto;
+        text-align: center;
+      }
+      h2 {
+        font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+        color: white;
+        height: fit-content;
+        text-align: center;
+        margin-top: 350px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="gradient">
+        <div class="main">
+          <h1>Unlimited movies, TV shows, and more.</h1>
+          <h2>Watch anywhere. Cancel anytime.</h2>
+        </div>
+        <img
+          id="imgBack"
+          src="Images/DE-en-20220502-popsignuptwoweeks-perspective_alpha_website_large (1).jpg"
+          alt="NetflixBackgroundImage"
+        />
+      </div>
+
+      <img id="netLogo" src="Images/RealTrans.png" alt="NetflixLogo"/>
+
+      <input id="btnSingIn" type="button" value="Sign In">
+      <select name="Languages" id="slcLan">
+        <option value="English">English</option>
+        <option value="German">German</option>
+      </select>
+      
+      <div class="section"></div>
+    </div>
+  </body>
+</html>

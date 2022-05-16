@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        /* border: 1px solid red; */
+        padding: 2px;
+      }
+      .fieldset input {
+        margin: 3px;
+        margin-left: 50px;
+        margin-right: 30px;
+      }
+      h3 {
+        text-align: center;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Welcome to Clarusway</h3>
+    <form action="result.html" method="send">
+      <div>
+        <fieldset>
+          <legend><strong>Sozlesme Onay</strong></legend>
+
+          <input type="checkbox" name="onay" id="onay" required />
+          <label for="onay"
+            >Asagida ki sozlesmeyi okudum ve kabul ediyorum</label
+          >
+          <br /><br />
+
+          <input type="submit" value="Formu kaydet" />
+          <input type="reset" value="Formu Temizle" />
+        </fieldset>
+      </div>
+      <br />
+      <div>
+        <fieldset class="fieldset">
+          <legend><strong>Kisisel Bilgiler</strong></legend>
+
+          <table>
+            <tbody>
+              <tr>
+                <td><label for="ad">Ad</label></td>
+                <td><input type="text" name="ad" id="ad" /></td>
+              </tr>
+              <tr>
+                <td><label for="soyisim">Soyisim</label></td>
+                <td><input type="text" name="soyisim" id="soyisim" /></td>
+              </tr>
+              <tr>
+                <td><label for="yas">Yas</label></td>
+                <td><input type="number" name="yas" id="yas" /></td>
+              </tr>
+              <tr>
+                <td><label for="email">E-mail</label></td>
+                <td><input type="email" name="email" id="email" /></td>
+              </tr>
+              <tr>
+                <td><label for="foto">Fotograf Seciniz</label></td>
+                <td><input type="file" name="foto" id="foto" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </fieldset>
+      </div>
+      <br />
+      <div>
+        <fieldset class="fieldset">
+          <legend><strong>Diger Bilgiler</strong></legend>
+
+          <table>
+            <tbody>
+              <tr>
+                <td><label for="baslangic">Sektore Giris Tarihi</label></td>
+                <td><input type="date" name="baslangic" id="date" /></td>
+              </tr>
+              <tr>
+                <td><label for="deneyim">Deneyim</label></td>
+                <td>
+                  <input type="radio" name="yil" id="" />
+                  <label for="yil1">1-5 Yil</label>
+
+                  <input type="radio" name="yil" id="" />
+                  <label for="yil2">6-10 Yil</label>
+
+                  <input type="radio" name="yil" id="" />
+                  <label for="yil">10 ve uzeri</label>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="dil">Programlama Dilleri</label></td>
+                <td>
+                  <select name="diller" id="dil" size="6" multiple>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="C++">C++</option>
+                    <option value="C#">C#</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="PHP">PHP</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </fieldset>
+      </div>
+    </form>
+  </body>
+</html>
