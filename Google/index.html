@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .nav {
+      display: flex;
+      font-size: 1.1rem;
+      height: 8vh;
+      background-color: red;
+      align-items: baseline;
+
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .left-div {
+      width: 100%;
+      height: 100%;
+    }
+    .left-inner a{
+      margin-left: 1rem;
+    }
+
+    .right-div {
+      width: 100%;
+      height: 100%;
+      justify-content: flex-end;
+    }
+    .right-inner {
+      display: flex;
+      justify-content: flex-end;
+      align-items: baseline;
+    }
+    .right-inner a,input {
+      margin-right: 1rem;
+    }
+    #appIcon {
+      margin: 0;
+      padding: 0;
+    }
+    .appIcon-a {
+      padding: 0;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <div class="left-div">
+          <div class="left-inner">
+            <a class="left" href="">About</a>
+            <a class="left" href="">Store</a>
+          </div>
+        </div>
+
+        <div class="right-div">
+          <div class="right-inner">
+            <a class="right" href="">Images</a>
+            <a class="right" href="">Gmail</a>
+            <a class="right appIcon-a" href="#"
+              ><img id="appIcon" src="images/appicon.png" alt=""
+            /></a>
+            <input class="right" id="btnSingIn" type="button" value="Sing In" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
